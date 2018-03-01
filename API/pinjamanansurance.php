@@ -7,7 +7,7 @@ $input = json_decode(file_get_contents('php://input'),true);
 // escape the columns and values from the input object
 $columns = preg_replace('/[^a-z0-9_]+/i','',array_keys($input));
 
- include '/../QueryScript/InsertAnsuran.php';
+ include dirname(__DIR__).'/QueryScript/InsertAnsuran.php';
 
 switch ($method) {
   case 'POST':

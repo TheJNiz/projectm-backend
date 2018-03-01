@@ -1,7 +1,7 @@
-INSERT INTO tblclient (ClientName, Password, DateCreated) 
+INSERT INTO tblClient (ClientName, Password, DateCreated) 
  SELECT * FROM ( SELECT 'ProjectM',SHA1('Password123'),NOW()) AS TEMP
 WHERE NOT EXISTS 
-  (SELECT ClientName FROM tblclient WHERE ClientName='ProjectM');
+  (SELECT ClientName FROM tblClient WHERE ClientName='ProjectM');
   
 INSERT INTO tblLoanType (Name) 
  SELECT * FROM ( SELECT 'Pinjaman Ansuran') AS TEMP
