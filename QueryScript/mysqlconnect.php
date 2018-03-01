@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1";
-$username = "root";
-$password = "";
+$username = "id4922234_root";
+$password = "Password123";
 $dbname = "projectm";
 
 // Create connection
