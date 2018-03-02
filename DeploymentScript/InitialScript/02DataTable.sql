@@ -23,7 +23,7 @@ WHERE NOT EXISTS
 WHERE NOT EXISTS 
   (SELECT Name FROM tblUserType WHERE Name='Admin');
   
-  INSERT INTO tblUser (UserName, Password,UserTypeID, DateCreated) 
- SELECT * FROM ( SELECT 'superadmin',SHA1('Password123'),1,NOW()) AS TEMP
+  INSERT INTO tblUser (UserName,  Email, Password,UserTypeID, DateCreated) 
+ SELECT * FROM ( SELECT 'superadmin','superadmin@gmail.com',SHA1('Password123'),1,NOW()) AS TEMP
 WHERE NOT EXISTS 
   (SELECT UserName FROM tblUser WHERE UserName='superadmin');
